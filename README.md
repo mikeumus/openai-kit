@@ -59,6 +59,7 @@ let completion = try await openAIClient.completions.create(
     model: Model.GPT3.davinci,
     prompts: ["Write a haiku"]
 )
+try await httpClient.shutdown()
 ~~~~
 
 ### What's Implemented
